@@ -1,0 +1,47 @@
+test-filter-string() {
+
+	echo "testing...";
+	echo;
+	before;
+
+	test1;
+	test2;
+	test3;
+
+	after;
+
+	echo;
+	echo "all tests complete"; 
+}
+
+#easy renaming throughout all tests
+subject() {
+	filter-string "$@";
+}
+
+
+#clean the sandbox before tests
+before() {
+	rm -Rf tests;
+	mkdir tests;
+	cd tests;
+}
+
+#return to previous state
+after() {
+	cd ..;
+}
+
+test1() {
+	echo "example bla bla bla example">test1;
+	cat test1;
+}
+
+test2() {
+	
+}
+
+test3() {
+	
+}
+

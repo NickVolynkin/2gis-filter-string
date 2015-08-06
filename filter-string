@@ -1,0 +1,17 @@
+
+filter-string() {
+	
+}
+
+
+# filename > contents
+readfile() {
+	cat $1;
+}
+
+
+
+# filename, string > void
+writefile() {
+	echo $2 > $1;
+}

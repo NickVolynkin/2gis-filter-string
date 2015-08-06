@@ -1,0 +1,5 @@
+auto() {
+	source filter-string;
+	source test-filter-string;
+	test-filter-string;
+}
