@@ -33,15 +33,35 @@ after() {
 }
 
 test1() {
-	echo "example bla bla bla example">test1;
-	cat test1;
+	echo 'example bla bla bla example'>test1;
+	#fcat test1;
 }
 
 test2() {
-	
+	fizz = () {
+		echo "hello world";
+	}
+	unset $fizz;
+	fizz;
 }
+
+unset fizz;
 
 test3() {
 	
+}
+
+foo() {
+    barr() {
+        echo "hello bar";
+    }
+    barr;
+
+    fizz = () {
+        echo "hello fizz";
+    }
+    fizz;
+    unset $barr;
+    unset fizz;
 }
 
