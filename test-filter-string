@@ -1,4 +1,4 @@
-test-filter-string() {
+run_tests() {
 
 	echo "testing...";
 	echo;
@@ -16,7 +16,7 @@ test-filter-string() {
 
 #easy renaming throughout all tests
 subject() {
-	filter-string "$@";
+	fs "$@";
 }
 
 
@@ -33,35 +33,19 @@ after() {
 }
 
 test1() {
-	echo 'example bla bla bla example'>test1;
-	#fcat test1;
+    echo '---test1:';
+	echo 'example bla bla bla example' > test1;
+	subject test1 'bla ';
+	cat test1_filtered;
 }
 
 test2() {
-	fizz = () {
-		echo "hello world";
-	}
-	unset $fizz;
-	fizz;
+    echo '---test2:';
+	echo 'example bla bla bla example' > test2;
+	subject test2 'bla ' test2_new;
+	cat test2_new
 }
-
-unset fizz;
 
 test3() {
 	
 }
-
-foo() {
-    barr() {
-        echo "hello bar";
-    }
-    barr;
-
-    fizz = () {
-        echo "hello fizz";
-    }
-    fizz;
-    unset $barr;
-    unset fizz;
-}
-
