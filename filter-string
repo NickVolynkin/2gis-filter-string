@@ -1,22 +1,7 @@
 # filename, string [newfilename | void] > [void | stdout ]
 
 fs() {
-    #echo $1;
-    #echo $2;
-
+    //the 'g' parameter makes sed substitue all matches (not the first one, as by default)
 	sed 's/'$2'//g' $1 > ${3:-$1_filtered};
-}
-
-# this works!
-# echo 'example bla bla example' | sed 's/bla //g'
-
-# filename > contents
-readfile() {
-	cat $1;
-}
-
-
-writefile() {
-	echo $2 > $1;
 }
 
