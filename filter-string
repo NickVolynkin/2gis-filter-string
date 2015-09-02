@@ -1,3 +1,5 @@
+# filename, string [newfilename | void] > [void | stdout ]
+
 fs() {
     #echo $1;
     #echo $2;
@@ -13,7 +15,7 @@ readfile() {
 	cat $1;
 }
 
-# filename, string > void
+
 writefile() {
 	echo $2 > $1;
 }

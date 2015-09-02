@@ -37,6 +37,7 @@ test1() {
 	echo 'example bla bla bla example' > test1;
 	subject test1 'bla ';
 	cat test1_filtered;
+	echo a;
 }
 
 test2() {
